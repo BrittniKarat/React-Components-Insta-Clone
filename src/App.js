@@ -7,8 +7,8 @@
 // Import the state hook
 import React, {useState} from 'react';
 // Import the Posts (plural!) and SearchBar components, since they are used inside App component
-import Posts from './components/Posts/Posts';
-import SearchBar from './components/SearchBar/SearchBar';
+import Posts from './components/Posts/Posts.js';
+import SearchBar from './components/SearchBar/SearchBar.js';
 // Import the dummyData
 import dummyData from './dummy-data';
 
@@ -35,9 +35,9 @@ const App = () => {
         - otherwise just return the post object unchanged.
      */
     const newLikes = posts.map(each => {
-     return  each.id === postId ? {...posts, likes: (each.likes + 1)} : each 
+     return  each.id === postId ? {...each, likes: (each.likes + 1)} : each 
     })
-
+    console.log(newLikes)
     setPosts(newLikes)
   };
 
