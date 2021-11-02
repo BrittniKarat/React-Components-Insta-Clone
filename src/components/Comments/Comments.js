@@ -1,4 +1,5 @@
 import React from 'react';
+import LikeSection from '../Posts/LikeSection';
 import Comment from './Comment';
 import './Comments.css';
 
@@ -10,8 +11,8 @@ const Comments = props => {
     <div>
       {/* map through the comments prop and render a Comment for every piece of data */}
     
-    { comments.comments.map(each => {
-      return <Comment comments={each.comments} key={each.id} />
+    { comments.map(each => {
+      return <Comment comment={each} key={each.id} />
     })}   
 
     </div>

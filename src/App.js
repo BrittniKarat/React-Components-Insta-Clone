@@ -37,7 +37,7 @@ const App = () => {
     const newLikes = posts.map(each => {
      return  each.id === postId ? {...each, likes: (each.likes + 1)} : each 
     })
-    console.log(newLikes)
+    
     setPosts(newLikes)
   };
 
@@ -47,7 +47,7 @@ const App = () => {
       <SearchBar />
       <Posts likePost = {likePost} posts = {posts}/>
       {/* Check the implementation of each component, to see what props they require, if any! */}
-      <Comments />
+
     </div>
   );
 };
